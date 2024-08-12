@@ -2,61 +2,78 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="PixelPlay" content="Disfruta de los videosjuegos que mas te gustan, encontraras una gran variedad con nosotros, vamos animate y visitanos">
+    <meta name="description" content="Descubre los mejores videojuegos en nuestra tienda. Encuentra ofertas y novedades en una amplia variedad de juegos.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Ejemplo del curso</title>
+    <title>Tienda de Videojuegos</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <nav>
-            <a href="#categorias" class="left-link">Categorías</a>
-            <a href="#iniciar-sesion" class="right-link">Iniciar Sesión</a>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="./Imagenes/Logodef.jpg" alt="Logo de la tienda">
+            </a>
+            <a href="#iniciar-sesion" class="nav-link">Iniciar Sesión</a>
         </nav>
     </header>
 
-    <main>
-        <h1 class="title">PixelPlay</h1>
-        <div class="game-grid">
-            <div class="game-card">
-                <img src="./Imagenes/evilwithin2.jpg" alt="Juego 1">
-                <h3>Evil Within 2</h3>
-                <p>$59.990</p>
-            </div>
-            <div class="game-card">
-                <img class="img1" src="./Imagenes/residentevil.jpg" alt="Juego 2">
-                <h3>Resident Evil 4</h3>
-                <p>$49.999</p>
-            </div>
-            <div class="game-card">
-                <img src="./Imagenes/minecraft.jpg" alt="Juego 3">
-                <h3>Minecraft</h3>
-                <p>$39.990</p>
-            </div>
-            <div class="game-card">
-                <img src="./Imagenes/gta.jpg" alt="Juego 4">
-                <h3>Grand theft auto V</h3>
-                <p>$69.990</p>
-            </div>
-            <div class="game-card">
-                <img src="./Imagenes/gary's.jpg" alt="Juego 5">
-                <h3>Gary's mod</h3>
-                <p>$29.990</p>
-            </div>
-            <div class="game-card">
-                <img src="./Imagenes/zelda.jpg" alt="Juego 6">
-                <h3>The legend of zelda: Breath of the wild</h3>
-                <p>$19.909</p>
-            </div>
-        </div>
-    </main>
-</body>
+    <main class="container">
+        <aside class="sidebar">
+            <a href="#categorias" class="sidebar-link">Categorías</a>
+            <ul class="lista">
+                <li><a href="supervivencia.html">Supervivencia</a></li>
+                <li><a href="terror.html">Terror</a></li>
+                <li><a href="suspenso.html">Suspenso</a></li>
+                <li><a href="accion.html">Acción</a></li>
+                <li><a href="mundo_abierto.html">Mundo Abierto</a></li>
+                <li><a href="todas_categorias.html" class="all-categories">Todas las Categorías</a></li>
+            </ul>
+        </aside>
 
-<footer>
-    <div>
-        <p>@derechos reservados</p>
-    </div>
-</footer>
+        <section class="main-content">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar juegos...">
+                <button>Buscar</button>
+            </div>
+
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="./Imagenes/evilwithin2.jpg" alt="Evil Within 2">
+                    <h3>Evil Within 2</h3>
+                    <p>$59.990</p>
+                </div>
+                <div class="game-card">
+                    <img src="./Imagenes/residentevil.jpg" alt="Resident Evil 4">
+                    <h3>Resident Evil 4</h3>
+                    <p>$49.999</p>
+                </div>
+                <div class="game-card">
+                    <img src="./Imagenes/minecraft.jpg" alt="Minecraft">
+                    <h3>Minecraft</h3>
+                    <p>$39.990</p>
+                </div>
+                <div class="game-card">
+                    <img src="./Imagenes/gta.jpg" alt="Grand Theft Auto V">
+                    <h3>Grand Theft Auto V</h3>
+                    <p>$69.990</p>
+                </div>
+                <div class="game-card">
+                    <img src="./Imagenes/gary's.jpg" alt="Gary's Mod">
+                    <h3>Gary's Mod</h3>
+                    <p>$29.990</p>
+                </div>
+                <div class="game-card">
+                    <img src="./Imagenes/zelda.jpg" alt="The Legend of Zelda: Breath of the Wild">
+                    <h3>The Legend of Zelda: Breath of the Wild</h3>
+                    <p>$19.909</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Videojuegos. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>
