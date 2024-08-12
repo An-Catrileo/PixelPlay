@@ -1,19 +1,27 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1b1b1b; /* Fondo oscuro */
-    color: #f4f4f4; /* Texto claro */
+    background-color: #1b1b1b;
+    color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Altura mínima de la página */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Asegura que las imágenes no excedan el contenedor */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Estilos del encabezado */
 header {
-    background-color: #222; /* Color oscuro para el encabezado */
-    padding: 10px 20px;
+    background: linear-gradient(90deg, #222, #2c2c2c);
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
@@ -23,47 +31,53 @@ header {
 }
 
 .navbar .logo img {
-    max-width: 150px; /* Tamaño del logo */
+    max-width: 180px;
     height: auto;
 }
 
 .nav-link {
-    color: #f4f4f4; /* Texto claro */
+    color: #f4f4f4;
     text-decoration: none;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 10px 25px;
     border-radius: 5px;
-    background: linear-gradient(45deg, #66a3ff, #66ffb3, #ff66b3, #ffb366); /* Gradiente suave pero menos pastel */
-    background-size: 400% 400%; /* Tamaño del gradiente */
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    background-size: 400% 400%;
     display: inline-block;
     text-align: center;
-    animation: gradient 3s ease infinite; /* Animación del gradiente */
+    animation: gradient 3s ease infinite;
+    transition: transform 0.3s ease;
 }
 
 .nav-link:hover {
-    background: linear-gradient(45deg, #66ffb3, #ff66b3, #ffb366, #66a3ff); /* Cambia el gradiente al pasar el mouse */
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    transform: scale(1.05);
 }
 
 /* Estilos del contenedor principal */
 .container {
     display: flex;
-    flex: 1; /* Permite que el contenedor principal ocupe el espacio disponible */
+    flex: 1;
+    margin-top: 20px;
 }
 
 /* Estilos del sidebar */
 .sidebar {
     width: 250px;
-    background-color: #333; /* Fondo oscuro para el sidebar */
-    color: #f4f4f4; /* Texto claro */
+    background-color: #2c2c2c;
+    color: #f4f4f4;
     padding: 20px;
+    border-right: 2px solid #A5D8FF;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-link {
-    font-size: 24px; /* Tamaño del texto en el sidebar */
+    font-size: 24px;
     color: #f4f4f4;
     text-decoration: none;
-    margin-bottom: 20px; /* Espacio debajo del logo */
+    margin-bottom: 20px;
     display: block;
+    font-weight: bold;
 }
 
 .lista {
@@ -72,40 +86,44 @@ header {
 }
 
 .lista li {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .lista a {
     text-decoration: none;
-    font-size: 18px; /* Tamaño del texto de los enlaces */
+    font-size: 18px;
     color: #f4f4f4;
+    border-right: 2px solid #A5D8FF;
     display: block;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #444; /* Fondo de enlace */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #444;
+    transition: background-color 0.3s ease;
 }
 
 .lista a:hover {
-    background-color: #555; /* Color de fondo al pasar el mouse */
+    background-color: #555;
 }
 
 /* Estilo del botón "Todas las Categorías" */
 .all-categories {
-    background: linear-gradient(45deg, #66a3ff, #66ffb3, #ff66b3, #ffb366); /* Gradiente suave pero menos pastel */
-    background-size: 400% 400%; /* Tamaño del gradiente */
-    color: #f4f4f4; /* Texto claro */
-    font-size: 18px; /* Tamaño de fuente igual a otros enlaces */
-    font-weight: bold; /* Texto en negrita */
-    text-align: center; /* Centrar texto */
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    background-size: 400% 400%;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
     display: block;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
     text-decoration: none;
-    animation: gradient 3s ease infinite; /* Animación del gradiente */
+    animation: gradient 3s ease infinite;
+    transition: transform 0.3s ease;
 }
 
 .all-categories:hover {
-    background: linear-gradient(45deg, #66ffb3, #ff66b3, #ffb366, #66a3ff); /* Cambia el gradiente al pasar el mouse */
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    transform: scale(1.05);
 }
 
 /* Animación del gradiente */
@@ -119,7 +137,7 @@ header {
 .main-content {
     flex: 1;
     padding: 20px;
-    background-color: #1b1b1b; /* Fondo oscuro para el área principal */
+    background-color: #1b1b1b;
 }
 
 /* Estilos de la barra de búsqueda */
@@ -130,67 +148,80 @@ header {
 
 .search-bar input {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #555;
-    border-radius: 5px 0 0 5px;
-    background-color: #333; /* Fondo oscuro para el input */
-    color: #f4f4f4; /* Texto claro */
+    border-radius: 8px 0 0 8px;
+    background-color: #333;
+    color: #f4f4f4;
+    font-size: 16px;
 }
 
 .search-bar button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: 1px solid #555;
     border-left: none;
-    background: linear-gradient(45deg, #66a3ff, #66ffb3, #ff66b3, #ffb366); /* Gradiente suave pero menos pastel */
-    background-size: 400% 400%; /* Tamaño del gradiente */
-    color: #f4f4f4; /* Texto claro */
+    background: linear-gradient(45deg, #b49ee7, #D4A5FF, #A5D8FF, #D4A5FF);
+    background-size: 400% 400%;
+    color: #f4f4f4;
     cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    animation: gradient 3s ease infinite; /* Animación del gradiente */
+    border-radius: 0 8px 8px 0;
+    animation: gradient 3s ease infinite;
+    transition: transform 0.3s ease;
 }
 
 .search-bar button:hover {
-    background: linear-gradient(45deg, #66ffb3, #ff66b3, #ffb366, #66a3ff); /* Cambia el gradiente al pasar el mouse */
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    transform: scale(1.05);
 }
 
 /* Estilos de la rejilla de juegos */
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas para la rejilla */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    border-right: 2px solid #A5D8FF;
+    border-top: 2px solid #D4A5FF;
 }
 
 .game-card {
-    background-color: #2c2c2c; /* Fondo oscuro para las tarjetas de juegos */
+    position: relative;
+    background-color: #2c2c2c;
     border: 1px solid #444;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.game-card img {
-    width: 100%;
-    height: 300px; /* Tamaño fijo para las imágenes */
-    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-    border-radius: 5px;
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    background-size: 200% 200%;
+    animation: iridescent 1.5s ease infinite;
 }
 
-.game-card h3 {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #f4f4f4; /* Texto claro */
-}
-
-.game-card p {
-    font-size: 16px;
-    color: #e74c3c; /* Color del texto del precio */
+/* Animación del gradiente iridiscente */
+@keyframes iridescent {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 /* Estilos del pie de página */
 footer {
-    background-color: #222; /* Color oscuro para el pie de página */
-    color: #f4f4f4; /* Texto claro */
-    padding: 10px;
+    background: linear-gradient(90deg, #222, #2c2c2c);
+    color: #f4f4f4;
+    padding: 15px;
     text-align: center;
+    border-right: 2px solid #A5D8FF;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
