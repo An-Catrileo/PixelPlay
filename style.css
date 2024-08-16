@@ -43,7 +43,7 @@ header {
     border-radius: 5px;
     background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
     background-size: 400% 400%;
-    display: inline-block;
+    display: inline;
     text-align: center;
     animation: gradient 3s ease infinite;
     transition: transform 0.3s ease;
@@ -228,4 +228,15 @@ footer {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
-
+.container-registro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #ffffff; /* Color del texto (blanco) */
+  }
+  
+ form{
+    color: #D4A5FF;
+ } 
